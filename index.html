@@ -24,6 +24,10 @@
   --border:      rgba(0,0,0,0.08);
   --border-gold: rgba(122,101,53,0.22);
   --moonlit:     #3d6a85;
+  --purple:      #7b5ea7;
+  --purple-light:#a085cc;
+  --purple-mid:  #9270bb;
+  --purple-bg:   rgba(123,94,167,0.07);
   --shadow:      rgba(0,0,0,0.06);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -69,7 +73,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .pex-what{font-size:0.72rem;color:var(--text-light);line-height:1.7;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border);}
 .pex-you{font-size:0.82rem;color:var(--text-dim);line-height:1.85;}
 .pex-you strong{color:var(--crimson-light);font-weight:500;}
-.pex-nakshatra{background:var(--green-dark);border-radius:8px;padding:10px 14px;margin-top:12px;font-size:0.73rem;color:var(--text-dim);line-height:1.7;border-left:2px solid var(--crimson-mid);}
+.pex-nakshatra{background:var(--purple-bg);border-radius:8px;padding:10px 14px;margin-top:12px;font-size:0.73rem;color:var(--text-dim);line-height:1.7;border-left:2px solid var(--purple-light);}
 .pex-now{background:rgba(192,144,48,0.07);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:0.73rem;color:var(--text-dim);line-height:1.7;border-left:2px solid var(--gold);}
 .pex-overlay.moonlit-mode .pex-card { border-top-color: var(--moonlit); }
 .pex-overlay.moonlit-mode .pex-coords { color: var(--moonlit); }
@@ -84,10 +88,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .jc-body{font-size:0.82rem;color:var(--text-dim);line-height:1.9;margin-bottom:0;}
 .jc-body p{margin-bottom:10px;}
 .jc-body p:last-child{margin-bottom:0;}
-.jc-highlight{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-style:italic;margin:14px 0;padding:12px 16px;border-left:2px solid var(--crimson-light);background:rgba(61,106,133,0.06);border-radius:0 8px 8px 0;}
+.jc-highlight{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-style:italic;margin:14px 0;padding:12px 16px;border-left:2px solid var(--purple-light);background:var(--purple-bg);border-radius:0 8px 8px 0;}
 .jc-planet-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
 .jc-planet-chip{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:0.7rem;color:var(--text-dim);}
-.jc-planet-chip.active{border-color:var(--border-gold);color:var(--gold);}
+.jc-planet-chip.active{border-color:var(--purple-light);color:var(--purple);}
 .jc-realtime{background:var(--green-dark);border-radius:10px;padding:14px 16px;margin-top:12px;font-size:0.75rem;color:var(--text-dim);line-height:1.7;border-left:2px solid var(--gold);}
 .jc-realtime strong{color:var(--gold-light);}
 /* ── TOP HEADER ── */
@@ -129,8 +133,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .astro-card-body p{margin-bottom:10px;}
 .astro-card-body p:last-child{margin-bottom:0;}
 .astro-card-body strong{color:var(--text);}
-.astro-card-body .astro-andie{background:var(--green-dark);border-radius:8px;padding:10px 14px;margin-top:10px;border-left:2px solid var(--gold);}
-.astro-card-body .astro-andie strong{color:var(--gold-light);}
+.astro-card-body .astro-andie{background:var(--purple-bg);border-radius:8px;padding:10px 14px;margin-top:10px;border-left:2px solid var(--purple-light);}
+.astro-card-body .astro-andie strong{color:var(--purple);}
 .today-card{background:var(--card);border-radius:14px;padding:22px 24px;margin-bottom:24px;border-left:3px solid var(--crimson);box-shadow:0 2px 16px var(--shadow);}
 .tc-eyebrow{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson-light);margin-bottom:6px;}
 .tc-date{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:var(--text);margin-bottom:2px;line-height:1.1;}
@@ -881,7 +885,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <p>Within Rahu's 18-year period: <strong style="color:var(--text)">Rahu–Saturn antardasha runs through August 2028</strong>. Saturn is in your 8th house (Aries, Ashwini) — transformation, depth, karmic building. This is the most demanding sub-period of the Mahadasha: it asks you to do the deep structural work, face what needs facing, and build what is real rather than what is easy. This is where the permanent growth happens.</p>
         <p>Then: <strong style="color:var(--text)">Rahu–Mercury antardasha begins August 2028</strong>. Mercury is your chart ruler in Pisces 7th. This is the chapter where your life direction clarity, partnerships, and spiritual intelligence come to the foreground. Build the foundation now — that chapter will want it built.</p>
         <p>Additionally: <strong style="color:var(--text)">your Saturn Return arrives around 2028–2029</strong> — Saturn returns to natal Aries 8th for the first time since your birth. The karmic accounting arrives. What you build in the Rahu–Saturn antardasha is the preparation. This planner year is the beginning of that preparation.</p>
-        <div class="jc-realtime"><strong>The whole planner year in one view:</strong> June 2026 → 11th house community seeds (Jupiter exalted on Rahu). July → inner world. August–September → identity and body reset. October–November → values, voice. December → foundation. 2027 → eclipses, birthday (28th), 7th house stellium new moon. The chart moves through you in real time. This planner helps you track it.</div>
+        <div class="jc-realtime"><strong>The whole planner year in one view:</strong> June 2026 → 11th house community seeds (Jupiter exalted on Rahu). July → inner world. August–September → identity and body reset. October–November → values, voice. December → foundation. 2027 → eclipses, birthday (March 2, turning 28), 7th house stellium new moon. The chart moves through you in real time. This planner helps you track it.</div>
       </div>
     </div>
 
@@ -1223,7 +1227,7 @@ const MINI_GLOSSARY={
 
 // Which glossary terms to show per day of week (planet day)
 const TERMS_BY_DOW={
-  0:['sun','ashlesha','2nd house'],
+  0:['sun','shatabhisha','6th house'],
   1:['moon','uttara phalguni','12th house'],
   2:['mars','vishakha','2nd house'],
   3:['mercury','chart ruler','7th house'],
@@ -1234,15 +1238,15 @@ const TERMS_BY_DOW={
 
 // Which glossary terms pair with each rotating daily tip (parallel to DAILY_TIPS)
 const DAILY_TIP_TERMS=[
-  ['rising sign','nakshatra','punarvasu'],
+  ['rising sign','nakshatra','hasta'],
   ['2nd house','exalted','stellium'],
-  ['5th house','swati','moon'],
-  ['ketu','nakshatra','chitra'],
-  ['rahu','11th house','ashwini'],
-  ['venus','3rd house','purva phalguni'],
-  ['jupiter','exalted','2nd house'],
-  ['saturn','12th house','rohini'],
-  ['mercury rx','chart ruler','2nd house'],
+  ['5th house','ketu','capricorn'],
+  ['ketu','nakshatra','5th house'],
+  ['rahu','11th house','ashlesha'],
+  ['venus','7th house','revati'],
+  ['jupiter','exalted','7th house'],
+  ['saturn','8th house','ashwini'],
+  ['mercury','chart ruler','7th house'],
   ['rising sign','hasta','chart ruler'],
   ['stellium','7th house','exalted'],
   ['venus','revati','7th house'],
