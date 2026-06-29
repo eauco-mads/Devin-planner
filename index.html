@@ -38,6 +38,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .main{flex:1;padding:28px 28px 60px;max-width:920px;}
 .mobile-chart-btn{display:none;width:100%;padding:9px 14px;margin-bottom:16px;background:var(--green-mid);border:1px solid var(--border-gold);border-radius:8px;color:var(--gold);font-size:0.75rem;letter-spacing:0.06em;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;}
 .mobile-chart-btn:hover{background:rgba(61,106,133,0.1);}
+.mobile-close-sidebar{display:none;width:100%;padding:11px;background:var(--crimson);color:#fff;border:none;border-radius:8px;font-size:0.8rem;font-weight:500;cursor:pointer;margin-bottom:18px;font-family:'Inter',sans-serif;letter-spacing:0.04em;}
 @media(max-width:760px){
   .outer{flex-direction:column;}
   .sidebar{display:none;position:fixed;top:89px;left:0;right:0;bottom:0;width:100%;height:calc(100vh - 89px);z-index:250;overflow-y:auto;border-right:none;border-bottom:none;}
@@ -63,7 +64,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .sb-item:hover{background:rgba(61,106,133,0.08);}
 .sb-item:hover .sb-place{color:var(--gold-light);}
 .sb-hint{font-size:0.5rem;color:var(--text-light);text-align:center;margin-top:4px;letter-spacing:0.08em;opacity:0.7;}
-.mobile-close-sidebar{display:none;width:100%;padding:9px;background:var(--crimson);color:#fff;border:none;border-radius:8px;font-size:0.75rem;cursor:pointer;margin-bottom:18px;font-family:'Inter',sans-serif;letter-spacing:0.04em;}
 /* Planet explainer panel */
 .pex-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:300;align-items:center;justify-content:center;padding:20px;}
 .pex-overlay.open{display:flex;}
