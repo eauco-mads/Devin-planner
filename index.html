@@ -239,6 +239,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .term-chip.open{background:rgba(122,101,53,0.10);border-color:var(--gold);border-radius:16px 16px 0 0;}
 .term-detail{display:none;background:rgba(192,144,48,0.07);border:1px solid var(--border-gold);border-top:none;border-radius:0 8px 8px 8px;padding:9px 12px;font-size:0.72rem;color:var(--text-dim);line-height:1.7;max-width:340px;}
 .term-detail.open{display:block;}
+/* ── FLOATING TODAY BUTTON ── */
+.float-today{position:fixed;bottom:22px;right:18px;background:var(--crimson);color:#fff;border:none;border-radius:22px;padding:10px 18px;font-family:'Inter',sans-serif;font-size:0.7rem;cursor:pointer;box-shadow:0 3px 16px rgba(107,79,168,0.35);z-index:400;letter-spacing:0.05em;opacity:0;pointer-events:none;transition:opacity 0.25s;}
+.float-today.visible{opacity:1;pointer-events:auto;}
 </style>
 </head>
 <body>
@@ -1096,32 +1099,64 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         </div>
       </div>
 
-      <!-- Core Stats -->
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--crimson);">
-          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Type</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Generator</div>
-          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Alchemist · Quantum HD</div>
+      <!-- Core Stats — tap to expand -->
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="astro-card" onclick="toggleAstro(this)" style="border-left-color:var(--crimson);margin-bottom:0;">
+          <div class="astro-card-header" style="padding:12px 14px;">
+            <div style="flex:1"><div style="font-size:0.5rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">Type</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-weight:500;line-height:1.2;">Generator</div><div style="font-size:0.6rem;color:var(--text-light);">Alchemist · tap to learn</div></div>
+            <span class="astro-card-arrow" style="font-size:0.55rem;">▼</span>
+          </div>
+          <div class="astro-card-body" style="padding:0 14px 14px;">
+            <p>Generators are the life-force builders of Human Design — roughly 70% of people. You have a <strong>defined Sacral center</strong>: a renewable source of energy that literally regenerates through the right work. You're not built to initiate. You're built to <strong>respond</strong>. When you wait for life to come to you and answer authentically, your energy builds. When you push from your head, it depletes.</p>
+            <div class="astro-andie"><strong>✦ For you:</strong> Your healing work isn't a project you push into existence. It's a response — to what calls you, to what lights your body up, to what people need and you know how to give. The Sacral "uh-huh" when someone asks if you want to help with something healing? That's your Generator speaking. Trust it.</div>
+          </div>
         </div>
-        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--purple);">
-          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Authority</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Emotional Solar Plexus</div>
-          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Creative · ride the wave</div>
+
+        <div class="astro-card" onclick="toggleAstro(this)" style="border-left-color:var(--purple);margin-bottom:0;">
+          <div class="astro-card-header" style="padding:12px 14px;">
+            <div style="flex:1"><div style="font-size:0.5rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">Authority</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-weight:500;line-height:1.2;">Emotional Solar Plexus</div><div style="font-size:0.6rem;color:var(--text-light);">Creative · tap to learn</div></div>
+            <span class="astro-card-arrow" style="font-size:0.55rem;">▼</span>
+          </div>
+          <div class="astro-card-body" style="padding:0 14px 14px;">
+            <p>Your Inner Authority is how your design makes correct decisions. With <strong>Emotional Solar Plexus authority</strong>, you ride an emotional wave — a natural cycle of highs and lows. The rule: <strong>never decide from the peak of excitement OR the trough of doubt.</strong> Wait. Clarity doesn't come in a moment for you. It comes after the wave moves through.</p>
+            <p>"Never in the now" is the Emotional Authority mantra.</p>
+            <div class="astro-andie"><strong>✦ For you:</strong> When something exciting is offered, your first YES is the peak — and it's not reliable. Sleep on it. Live with it for a few days. The clarity that arrives from a calmer, steadier place is the accurate signal. This is not being slow or indecisive. This is your design working correctly.</div>
+          </div>
         </div>
-        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--gold);">
-          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Profile</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">1 / 4</div>
-          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Resource | Stabilizer</div>
+
+        <div class="astro-card" onclick="toggleAstro(this)" style="border-left-color:var(--gold);margin-bottom:0;">
+          <div class="astro-card-header" style="padding:12px 14px;">
+            <div style="flex:1"><div style="font-size:0.5rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">Profile</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-weight:500;line-height:1.2;">1 / 4 · Resource | Stabilizer</div><div style="font-size:0.6rem;color:var(--text-light);">Investigator / Opportunist · tap to learn</div></div>
+            <span class="astro-card-arrow" style="font-size:0.55rem;">▼</span>
+          </div>
+          <div class="astro-card-body" style="padding:0 14px 14px;">
+            <p><strong>Line 1 (Resource/Investigator):</strong> You need to build a solid foundation of knowledge before you feel secure enough to share or teach. You're a researcher at heart — you need to understand things deeply before going wide. Insecurity in Line 1 comes from not knowing enough yet. The fix: study. Go deeper.</p>
+            <p><strong>Line 4 (Stabilizer/Opportunist):</strong> Your life opportunities come through your existing network — through people who already know and trust you. You don't go get opportunities; they come through relationships. You're here to be a stable, reliable resource FOR your people, and they bring the world to you.</p>
+            <div class="astro-andie"><strong>✦ For you:</strong> Build the healing knowledge foundation first (Line 1). Then let it flow through the people who already know you (Line 4). The community you're building isn't cold outreach — it's the natural next step from relationships already forming. This is also why Rahu in your 11th house (community/network) is so significant: your Vedic chart and your HD Profile both say the same thing.</div>
+          </div>
         </div>
-        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--crimson-light);">
-          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Definition</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Split</div>
-          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Two separate circuits</div>
+
+        <div class="astro-card" onclick="toggleAstro(this)" style="border-left-color:var(--crimson-light);margin-bottom:0;">
+          <div class="astro-card-header" style="padding:12px 14px;">
+            <div style="flex:1"><div style="font-size:0.5rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">Definition</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-weight:500;line-height:1.2;">Split</div><div style="font-size:0.6rem;color:var(--text-light);">Two separate circuits · tap to learn</div></div>
+            <span class="astro-card-arrow" style="font-size:0.55rem;">▼</span>
+          </div>
+          <div class="astro-card-body" style="padding:0 14px 14px;">
+            <p>Split Definition means you have two separate circuitry groups that don't internally connect: <strong>Group 1 — Head + Ajna + Throat</strong> (how you think and speak) and <strong>Group 2 — Sacral + Root + Solar Plexus</strong> (your life force, pressure, and emotional depth). The bridge between them comes from <em>outside</em> — from the right person, environment, or frequency.</p>
+            <div class="astro-andie"><strong>✦ For you:</strong> Notice when things "click" — when your mental clarity and your body's energy suddenly feel connected, like you know what you want and your whole system is a yes. That's your split being bridged. The people who bridge you aren't codependency. They're circuitry completion. Pay close attention to who you feel most yourself around.</div>
+          </div>
         </div>
-        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--gold);">
-          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Strategy</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">To Respond</div>
-          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Wait · then answer your gut</div>
+
+        <div class="astro-card" onclick="toggleAstro(this)" style="border-left-color:var(--gold-light);margin-bottom:0;">
+          <div class="astro-card-header" style="padding:12px 14px;">
+            <div style="flex:1"><div style="font-size:0.5rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">Strategy</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);font-weight:500;line-height:1.2;">To Respond</div><div style="font-size:0.6rem;color:var(--text-light);">Wait · then answer your gut · tap to learn</div></div>
+            <span class="astro-card-arrow" style="font-size:0.55rem;">▼</span>
+          </div>
+          <div class="astro-card-body" style="padding:0 14px 14px;">
+            <p>Generator Strategy is To Respond — and it's the most misunderstood piece of Human Design for Generators. Responding doesn't mean being passive. It means waiting for life to give you something to respond TO: a question, an offer, an opportunity, an idea that lands in your field. Then answer from your Sacral body — the gut "uh-huh" or "unh-unh" — before your mind engages.</p>
+            <p>The frustration that Generators feel when things feel stuck or slow is almost always coming from initiating — from deciding what you <em>should</em> do and pushing toward it from the head.</p>
+            <div class="astro-andie"><strong>✦ Try this:</strong> For one week, experiment with deliberately pausing before acting. Notice how quickly the right things come to you to respond to when you stop chasing. The Sacral knows before the mind does — and it communicates in body sensations and gut sounds, not words.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1138,6 +1173,21 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--text-dim);">Frustration</div>
         <div style="font-size:0.72rem;color:var(--text-light);margin-top:4px;line-height:1.6;">The Generator's signal to slow down, stop initiating, and return to waiting for the right response.</div>
       </div>
+    </div>
+
+    <!-- TIES IT TOGETHER -->
+    <div style="background:var(--card);border-radius:12px;padding:18px 20px;margin-bottom:22px;box-shadow:0 1px 8px var(--shadow);border-top:2px solid var(--purple);">
+      <div style="font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:10px;">How It All Works Together — A Real Day in Your Design</div>
+      <p style="font-size:0.8rem;color:var(--text-dim);line-height:1.9;margin-bottom:8px;">Here's what Generator + Emotional Authority + 1/4 Profile + Split Definition looks like in one day:</p>
+      <ol style="font-size:0.78rem;color:var(--text-dim);line-height:1.9;padding-left:18px;margin-bottom:10px;">
+        <li>Something comes to you — a person asks for your help with their health, or an opportunity to do healing work shows up.</li>
+        <li>Your <strong style="color:var(--text)">Sacral responds first</strong>: an "uh-huh" or "unh-unh" in your gut, before your mind engages. Notice it.</li>
+        <li>If it's a yes but a big decision, you don't commit immediately. You feel the excitement now — and you <strong style="color:var(--text)">wait</strong>. The emotional wave needs to move through.</li>
+        <li>A day or two later, from a calmer place, the yes is still there. That's <strong style="color:var(--text)">clarity</strong>. Now say yes.</li>
+        <li>While you're in it, the right person shows up and something <em>clicks</em> — your mind and your body suddenly speak the same language. Your <strong style="color:var(--text)">split is being bridged</strong>.</li>
+        <li>You feel <strong style="color:var(--text)">satisfied</strong> — not just happy, but deeply right. A Sacral hum of "yes, this." That's alignment.</li>
+      </ol>
+      <div class="jc-highlight">This is your design doing exactly what it was built for. When you feel satisfaction — you're in it. When you feel frustration — something was initiated from the head instead of responded from the body. Come back to the body. Come back to waiting.</div>
     </div>
 
     <!-- INCARNATION CROSS -->
@@ -1282,6 +1332,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 </main>
 </div>
 
+<button class="float-today" id="floatToday" onclick="goToday()">↑ Today</button>
+
 <!-- PLANET EXPLAINER -->
 <div class="pex-overlay" id="pexModal">
   <div class="pex-card">
@@ -1405,13 +1457,13 @@ const DAILY_TIPS=[
 ];
 
 const DOW_TODOS={
-  0:['Body check-in: what does your nervous system actually need today?','6th house practice: tend one specific health habit with full intention','Sun in Aquarius 6th — unconventional healing: what helps you that most people overlook?','Rest or move based on what the body actually asks for, not what you think you should do','Note one thing you\'re doing in service of your healing or another\'s'],
-  1:['12th house Moon day — protect your solitude today. Rest without guilt.','Write what\'s actually in your inner world — Moon in Leo 12th needs expression to breathe','Do one genuinely nourishing thing for your emotional body today','Uttara Phalguni Moon: what generous, warm impulse wants to come through you today?','Honor the inner world: what has been living in your interior that needs acknowledgment?'],
-  2:['2nd house day — look at what you\'re building materially: is it aligned with your values?','Move your body with intention: Mars in Libra 2nd wants effort that feels balanced','Vishakha: sustained effort toward a specific goal — what is the goal? Work toward it directly','What do you genuinely value that you haven\'t been fully honoring in your material life?','Do one thing today that moves you toward a tangible resource or earning goal'],
-  3:['Chart ruler day — intuition before analysis. What do you know before you can explain it?','Mercury in Pisces 7th: reach out to someone meaningful. Connection is thinking, for your chart.','Write or reflect on the spiritual knowing that has been arising this week','Let the inner knowing come first today before you decide or communicate anything important','What partnership truth or spiritual wisdom has been forming? Give it space today.'],
-  4:['Jupiter in Pisces 7th day — expansion through wisdom and meaningful connection','Invest in something philosophical today: a book, a conversation, a practice that opens your mind','Who in your life carries genuine wisdom? Be in contact with that person or that energy today','Gratitude practice: what has come to you through others this week that you hadn\'t expected?','Trust what is expanding through your partnerships — Jupiter in own sign is steady and real'],
-  5:['Venus exalted in Pisces 7th — let beauty come TO you. Receive it today.','Revati Venus: the last nakshatra, arrival. What are you finally arriving at in love or relationship?','Do one thing that is genuinely pleasurable and spiritually aligned — not performance, just grace','Let yourself be loved, appreciated, or seen today without deflecting or minimizing it','What beautiful or loving thing wants to move through your relationships today?'],
-  6:['Saturn in Aries 8th — do the hard, transformative work today. Face what\'s been avoided.','Rahu–Saturn antardasha: this is the karmic building season. What is being built in the difficult places?','Deep work: journal on what is transforming slowly in your life that needs acknowledgment','What shared resource, financial arrangement, or deep personal process needs attention today?','Do the thing future you will thank you for — Saturn 8th rewards disciplined depth, not shortcuts']
+  0:['Body check-in: what does your nervous system actually need today?','6th house practice: tend one specific health habit with full intention','Sun in Aquarius 6th — unconventional healing: what helps you that most people overlook?','Generator check: what are you doing because you initiated vs. actually responded to? Notice the energy difference in your body.','Rest or move based on what the body actually asks for, not what you think you should do'],
+  1:['12th house Moon day — protect your solitude today. Rest without guilt.','Emotional wave check-in: where are you on your wave right now — peak, valley, or calm middle? Don\'t make major decisions from peak or valley.','Write what\'s actually in your inner world — Moon in Leo 12th needs expression to breathe','Uttara Phalguni Moon: what generous, warm impulse wants to come through you today?','Honor the inner world: what has been living in your interior that needs acknowledgment?'],
+  2:['2nd house day — look at what you\'re building materially: is it aligned with your values?','Sacral response check: when you think about your main current focus, does your body say uh-huh or unh-unh? Trust the body, not the justification.','Vishakha: sustained effort toward a specific goal — what is the goal? Work toward it directly','What do you genuinely value that you haven\'t been fully honoring in your material life?','Do one thing today that moves you toward a tangible resource or earning goal'],
+  3:['Chart ruler day — intuition before analysis. What do you know before you can explain it?','1/4 Profile — Line 1 day: what foundation knowledge are you building? Research, go deeper before going wider. Insecurity in Line 1 is fixed by knowing more.','Mercury in Pisces 7th: reach out to someone meaningful. Connection IS thinking, for your chart.','Write or reflect on the spiritual knowing that has been arising this week','What partnership truth or spiritual wisdom has been forming? Give it space today.'],
+  4:['Jupiter in Pisces 7th day — expansion through wisdom and meaningful connection','1/4 Profile — Line 4 day: who in your existing network needs to hear from you? Reach out. Your impact moves through relationships, not cold outreach.','Who in your life carries genuine wisdom? Be in contact with that person or that energy today','Gratitude practice: what has come to you through others this week that you hadn\'t expected?','Trust what is expanding through your partnerships — Jupiter in own sign is steady and real'],
+  5:['Venus exalted in Pisces 7th — let beauty come TO you. Receive it today.','Split Definition day: who bridges you? Notice if you feel more complete, clearer, or more alive around specific people today. Those people are circuit bridges.','Do one thing that is genuinely pleasurable and spiritually aligned — not performance, just grace','Let yourself be loved, appreciated, or seen today without deflecting or minimizing it','What beautiful or loving thing wants to move through your relationships today?'],
+  6:['Saturn in Aries 8th — do the hard, transformative work today. Face what\'s been avoided.','Emotional Authority reminder: if you\'re tempted to make a permanent decision from this heavy Saturn day energy, wait. Ride the wave. Clarity comes from calm, not pressure.','Rahu–Saturn antardasha: this is the karmic building season. What is being built in the difficult places?','Deep work: journal on what is transforming slowly in your life that needs acknowledgment','Do the thing future you will thank you for — Saturn 8th rewards disciplined depth, not shortcuts']
 };
 
 const DAY_GUIDES={
@@ -1460,7 +1512,18 @@ const MINI_GLOSSARY={
   'revati':{label:'Revati (Venus Exalted)',def:'Venus\'s nakshatra (Pisces 7th). The last nakshatra — the final journey, the arrival home. Mercury-ruled. Symbol: a fish in water, completely in its element. Venus exalted in Revati: what you attract in love and partnership has a quality of arrival — finally feeling completely at home in connection.'},
   'vishakha':{label:'Vishakha (Mars)',def:'Mars\'s nakshatra (Libra 2nd). Means "the forked branch." Dual rulers: Jupiter and Indra. Mars in Vishakha: your resource-building has a philosophical depth (Jupiter) alongside worldly assertiveness (Indra). Patient, sustained effort — you work toward material goals with unusual philosophical grounding.'},
   'ashlesha':{label:'Ashlesha (Rahu)',def:'Rahu\'s nakshatra (Cancer 11th). Means "the entwiner." Serpent energy — Mercury-ruled, deeply psychological. The community you build has a quality of deep seeing and emotional intelligence. Rahu in Ashlesha: your evolutionary community work involves penetrating insight into what people actually need.'},
-  'uttara bhadrapada':{label:'Uttara Bhadrapada (Mercury + Jupiter)',def:'Mercury and Jupiter share this nakshatra (Pisces 7th). Saturn-ruled. Symbol: the back legs of a funeral cot — associated with the rain that feeds everything. Deep stillness, dissolution into something vast. Your partnerships carry a quality of profound depth and wisdom that goes beyond ordinary understanding.'}
+  'uttara bhadrapada':{label:'Uttara Bhadrapada (Mercury + Jupiter)',def:'Mercury and Jupiter share this nakshatra (Pisces 7th). Saturn-ruled. Symbol: the back legs of a funeral cot — associated with the rain that feeds everything. Deep stillness, dissolution into something vast. Your partnerships carry a quality of profound depth and wisdom that goes beyond ordinary understanding.'},
+  'generator':{label:'Generator (HD Type)',def:'Your Human Design type. Generators have a defined Sacral center — renewable life-force energy that rebuilds through the right work. You\'re built to respond, not initiate. When you wait and respond authentically, your energy grows. When you push from your head, you deplete. ~70% of people are Generators.'},
+  'sacral':{label:'Sacral Center (HD)',def:'Your most important defined center in Human Design. The Sacral is your life-force engine — it communicates through gut sounds ("uh-huh" = yes, "unh-unh" = no) and body sensations BEFORE your mind has a chance to engage. Trust the Sacral response over the mental justification.'},
+  'to respond':{label:'To Respond (Strategy)',def:'Generator strategy. Don\'t initiate from your head — wait for life to offer you something, then answer from your gut. Responding doesn\'t mean being passive: it means letting the right things come to you rather than chasing what you think you should want. Frustration is the signal you\'ve started initiating.'},
+  'emotional authority':{label:'Emotional Authority (HD)',def:'Your inner decision-making system. You ride an emotional wave — natural highs and lows. Never decide from the peak of excitement or the trough of doubt. Wait. Clarity comes after the wave moves through, from a calmer, steadier place. "Never in the now" is the mantra.'},
+  'emotional wave':{label:'Emotional Wave (HD)',def:'The natural rise and fall of emotional energy for people with defined Solar Plexus. It\'s not your mood — it\'s a biological cycle. Peaks feel exciting and open; troughs feel heavy or doubtful. Neither is the full truth. Clarity lives in the middle, after the wave has moved through.'},
+  'profile 1/4':{label:'Profile 1/4 (Resource | Stabilizer)',def:'Line 1 = Investigator. You need a foundation of deep knowledge before you can feel secure sharing it. Study, research, go deep. Line 4 = Opportunist. Your life opportunities come through your existing network — through people who already know you. You don\'t chase; opportunities come through trust.'},
+  'split definition':{label:'Split Definition (HD)',def:'Two separate circuitry groups that don\'t internally connect. Your groups: Head-Ajna-Throat AND Sacral-Root-Solar Plexus. The bridge comes from outside — the right person or environment completes your circuit. Notice who makes everything "click." Those people are energetically significant for you.'},
+  'defined center':{label:'Defined Center (HD)',def:'A center with consistent, reliable energy — shown as colored in on the bodygraph. Your defined centers: Head, Ajna, Throat, Sacral, Solar Plexus, Root. These are consistent parts of your energy field that you express outward and others can feel.'},
+  'open center':{label:'Open Center (HD)',def:'A center that takes in and amplifies the energy around it rather than generating it consistently. Your open centers: G/Self, Heart/Will, Spleen. Open centers aren\'t weaknesses — they\'re where you\'re most flexible, wise from experience, and sensitive to your environment.'},
+  'satisfaction':{label:'Satisfaction (Generator Signal)',def:'The Generator\'s alignment signal. When your life force is flowing through work, people, and experiences that are correct for you, you feel deeply satisfied — not just happy, but RIGHT. A whole-body sense of "yes, this." Satisfaction is your confirmation that you responded correctly.'},
+  'frustration':{label:'Frustration (Generator Signal)',def:'The Generator\'s misalignment signal. When you feel frustrated — stuck, depleted, like nothing is working — it\'s almost always because you\'ve been initiating from your head instead of responding from your body. Frustration is not a character flaw. It\'s information. Come back to the body, come back to waiting.'}
 };
 
 // Which glossary terms to show per day of week (planet day)
@@ -1689,6 +1752,22 @@ function restoreJournals(){
   MONTHS.forEach(([y,m])=>{const key=y+'-'+m;const el=document.getElementById('journal-'+key);if(el&&state['journal-'+key])el.value=state['journal-'+key];});
 }
 
+function updateNavActive(){
+  const sections=document.querySelectorAll('.month-section');
+  const topNav=document.getElementById('topMonthNav');
+  const ft=document.getElementById('floatToday');
+  if(ft) ft.classList.toggle('visible',window.scrollY>500);
+  if(!topNav) return;
+  let activeId=null;
+  const offset=120;
+  sections.forEach(s=>{if(s.getBoundingClientRect().top<=offset) activeId=s.id;});
+  topNav.querySelectorAll('button').forEach(b=>{
+    const oc=b.getAttribute('onclick')||'';
+    const match=(activeId==='month-index'&&oc.includes('goIndex'))||(activeId==='astro-index'&&oc.includes('goAstroIndex'))||(activeId==='hd-index'&&oc.includes('goHdIndex'))||(activeId&&oc.includes(activeId.replace('month-','').replace('-',',')));
+    b.classList.toggle('active',!!match);
+  });
+}
+window.addEventListener('scroll',updateNavActive,{passive:true});
 window.addEventListener('DOMContentLoaded',()=>{buildToday();buildNav();MONTHS.forEach(([y,m])=>buildCal(y,m));restoreJournals();});
 
 // ── PLANET EXPLAINER ─────────────────────────────────────────────────────
