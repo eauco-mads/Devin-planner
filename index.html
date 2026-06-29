@@ -7,28 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:          #f5f2fd;
+  --bg:          #f4f1fc;
   --card:        #ffffff;
-  --card2:       #ede8f8;
+  --card2:       #ece7f8;
   --crimson:     #6b4fa8;
   --crimson-mid: #8266b8;
   --crimson-light:#a08acc;
-  --gold:        #b07d2a;
-  --gold-light:  #c99040;
-  --gold-bg:     rgba(176,125,42,0.09);
-  --green-dark:  #ede8f8;
-  --green-mid:   #e0d8f4;
+  --gold:        #1a5c38;
+  --gold-light:  #2a7a4e;
+  --gold-bg:     rgba(26,92,56,0.08);
+  --green-dark:  #e3eeea;
+  --green-mid:   #cfe0d8;
   --text:        #1e1a2e;
-  --text-dim:    #3d3560;
-  --text-light:  #8a80aa;
-  --border:      rgba(100,80,150,0.13);
-  --border-gold: rgba(176,125,42,0.25);
+  --text-dim:    #3a3458;
+  --text-light:  #7a7298;
+  --border:      rgba(90,70,140,0.12);
+  --border-gold: rgba(26,92,56,0.28);
   --moonlit:     #6b4fa8;
   --purple:      #9b7fd4;
   --purple-light:#c0a8e8;
   --purple-mid:  #ae90d8;
-  --purple-bg:   rgba(155,127,212,0.14);
-  --shadow:      rgba(80,60,130,0.08);
+  --purple-bg:   rgba(155,127,212,0.12);
+  --shadow:      rgba(70,50,120,0.07);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -1739,7 +1739,7 @@ function toggleChapter(el){el.classList.toggle('open');}
 function toggleAstro(el){el.classList.toggle('open');}
 
 function fireworks(){
-  const colors=['#6b4fa8','#c0a8e8','#b07d2a','#c99040','#9b7fd4','#f8f5fd','#8266b8'];
+  const colors=['#6b4fa8','#9b7fd4','#1a5c38','#2a7a4e','#c0a8e8','#f4f1fc','#8266b8'];
   for(let i=0;i<65;i++){
     const el=document.createElement('div');el.className='confetti-piece';
     el.style.cssText='left:'+Math.random()*100+'%;top:-10px;background:'+colors[Math.floor(Math.random()*colors.length)]+';animation-duration:'+(1.5+Math.random()*2)+'s;animation-delay:'+Math.random()*0.6+'s;';
