@@ -7,28 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:          #faf8f4;
-  --card:        #ffffff;
-  --card2:       #f0ebe2;
-  --crimson:     #4a9e96;
-  --crimson-mid: #5bb5ad;
-  --crimson-light:#82ccc6;
+  --bg:          #eae4f4;
+  --card:        #f8f5fd;
+  --card2:       #e2daf0;
+  --crimson:     #6b4fa8;
+  --crimson-mid: #8266b8;
+  --crimson-light:#a08acc;
   --gold:        #b07d2a;
   --gold-light:  #c99040;
-  --gold-bg:     rgba(176,125,42,0.08);
-  --green-dark:  #eaf4f2;
-  --green-mid:   #d2ece8;
-  --text:        #1e2420;
-  --text-dim:    #3d4a42;
-  --text-light:  #7a8a80;
-  --border:      rgba(0,0,0,0.07);
-  --border-gold: rgba(176,125,42,0.22);
-  --moonlit:     #4a9e96;
-  --purple:      #8b68c0;
-  --purple-light:#b095d5;
-  --purple-mid:  #9e7acc;
-  --purple-bg:   rgba(139,104,192,0.09);
-  --shadow:      rgba(0,0,0,0.05);
+  --gold-bg:     rgba(176,125,42,0.09);
+  --green-dark:  #e4ddf2;
+  --green-mid:   #d8d0ec;
+  --text:        #1e1a2e;
+  --text-dim:    #3d3560;
+  --text-light:  #8a80aa;
+  --border:      rgba(100,80,150,0.13);
+  --border-gold: rgba(176,125,42,0.25);
+  --moonlit:     #6b4fa8;
+  --purple:      #9b7fd4;
+  --purple-light:#c0a8e8;
+  --purple-mid:  #ae90d8;
+  --purple-bg:   rgba(155,127,212,0.14);
+  --shadow:      rgba(80,60,130,0.08);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -1436,7 +1436,7 @@ function toggleChapter(el){el.classList.toggle('open');}
 function toggleAstro(el){el.classList.toggle('open');}
 
 function fireworks(){
-  const colors=['#4a9e96','#82ccc6','#b07d2a','#8b68c0','#b095d5','#c99040','#5bb5ad'];
+  const colors=['#6b4fa8','#c0a8e8','#b07d2a','#c99040','#9b7fd4','#f8f5fd','#8266b8'];
   for(let i=0;i<65;i++){
     const el=document.createElement('div');el.className='confetti-piece';
     el.style.cssText='left:'+Math.random()*100+'%;top:-10px;background:'+colors[Math.floor(Math.random()*colors.length)]+';animation-duration:'+(1.5+Math.random()*2)+'s;animation-delay:'+Math.random()*0.6+'s;';
