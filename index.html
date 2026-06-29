@@ -1041,6 +1041,244 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
   </div>
 
+  <div class="glyph-divider">✦ · ✦ · ✦</div>
+
+  <!-- HUMAN DESIGN SECTION -->
+  <div class="month-section" id="hd-index">
+    <div class="section-heading">Human Design</div>
+    <p style="font-size:0.8rem;color:var(--text-light);line-height:1.8;margin-bottom:24px;">Human Design synthesizes the I Ching, Kabbalah, astrology, and the chakra system into a map of how your specific energy is designed to operate. It doesn't tell you who to be — it shows you how you're already built.</p>
+
+    <!-- BODYGRAPH + CORE STATS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px;align-items:start;">
+      <!-- SVG Bodygraph -->
+      <div style="background:var(--card);border-radius:14px;padding:20px 16px;box-shadow:0 1px 8px var(--shadow);text-align:center;">
+        <div style="font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;">Devin's Bodygraph</div>
+        <svg viewBox="0 0 240 340" width="100%" style="max-width:200px;display:block;margin:0 auto">
+          <!-- CHANNELS (drawn first, behind centers) -->
+          <line x1="120" y1="50" x2="120" y2="58" stroke="var(--crimson)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="120" y1="92" x2="120" y2="102" stroke="var(--crimson)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="120" y1="242" x2="120" y2="252" stroke="var(--crimson)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="143" y1="268" x2="162" y2="230" stroke="var(--crimson)" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="148" y1="264" x2="163" y2="244" stroke="var(--crimson)" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- OPEN CENTERS -->
+          <!-- G/Self Center - diamond -->
+          <polygon points="120,132 146,158 120,184 94,158" fill="var(--card2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="120" y="162" text-anchor="middle" font-size="8" fill="var(--text-light)" font-family="Inter,sans-serif">G</text>
+          <!-- Heart/Will - small tilted square -->
+          <polygon points="152,140 172,148 164,170 144,162" fill="var(--card2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="158" y="159" text-anchor="middle" font-size="6.5" fill="var(--text-light)" font-family="Inter,sans-serif">♡</text>
+          <!-- Spleen - triangle pointing right -->
+          <polygon points="48,206 80,224 48,242" fill="var(--card2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="228" text-anchor="middle" font-size="5.5" fill="var(--text-light)" font-family="Inter,sans-serif">SP</text>
+          <!-- DEFINED CENTERS -->
+          <!-- Head - triangle pointing up -->
+          <polygon points="120,10 90,52 150,52" fill="var(--crimson)"/>
+          <text x="120" y="41" text-anchor="middle" font-size="7.5" fill="white" font-family="Inter,sans-serif" font-weight="600">HEAD</text>
+          <!-- Ajna - triangle pointing down -->
+          <polygon points="120,92 90,56 150,56" fill="var(--crimson-mid)"/>
+          <text x="120" y="73" text-anchor="middle" font-size="7.5" fill="white" font-family="Inter,sans-serif" font-weight="600">AJNA</text>
+          <!-- Throat - rectangle -->
+          <rect x="96" y="100" width="48" height="30" rx="4" fill="var(--crimson)"/>
+          <text x="120" y="119" text-anchor="middle" font-size="7.5" fill="white" font-family="Inter,sans-serif" font-weight="600">THROAT</text>
+          <!-- Sacral - large rectangle -->
+          <rect x="90" y="198" width="60" height="46" rx="4" fill="var(--crimson)"/>
+          <text x="120" y="225" text-anchor="middle" font-size="7.5" fill="white" font-family="Inter,sans-serif" font-weight="600">SACRAL</text>
+          <!-- Solar Plexus - triangle pointing left -->
+          <polygon points="197,206 163,224 197,242" fill="var(--crimson-mid)"/>
+          <text x="188" y="229" text-anchor="middle" font-size="5.5" fill="white" font-family="Inter,sans-serif" font-weight="600">SX</text>
+          <!-- Root - rectangle -->
+          <rect x="92" y="250" width="56" height="32" rx="4" fill="var(--crimson)"/>
+          <text x="120" y="271" text-anchor="middle" font-size="7.5" fill="white" font-family="Inter,sans-serif" font-weight="600">ROOT</text>
+        </svg>
+        <div style="display:flex;gap:14px;justify-content:center;margin-top:14px;">
+          <span style="font-size:0.6rem;color:var(--text-light);display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:10px;height:10px;background:var(--crimson);border-radius:2px;"></span>Defined</span>
+          <span style="font-size:0.6rem;color:var(--text-light);display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:10px;height:10px;background:var(--card2);border:1px solid var(--border);border-radius:2px;"></span>Open</span>
+        </div>
+      </div>
+
+      <!-- Core Stats -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--crimson);">
+          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Type</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Generator</div>
+          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Alchemist · Quantum HD</div>
+        </div>
+        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--purple);">
+          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Authority</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Emotional Solar Plexus</div>
+          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Creative · ride the wave</div>
+        </div>
+        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--gold);">
+          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Profile</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">1 / 4</div>
+          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Resource | Stabilizer</div>
+        </div>
+        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--crimson-light);">
+          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Definition</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">Split</div>
+          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Two separate circuits</div>
+        </div>
+        <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);border-left:3px solid var(--gold);">
+          <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Strategy</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text);font-weight:500;">To Respond</div>
+          <div style="font-size:0.62rem;color:var(--text-light);margin-top:1px;">Wait · then answer your gut</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SATISFACTION + FRUSTRATION -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px;">
+      <div style="background:var(--card);border-radius:10px;padding:14px 16px;box-shadow:0 1px 6px var(--shadow);">
+        <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:4px;">✦ You're aligned when you feel</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--text);">Satisfaction</div>
+        <div style="font-size:0.72rem;color:var(--text-light);margin-top:4px;line-height:1.6;">The Generator's signal that life force is flowing through the right work and relationships.</div>
+      </div>
+      <div style="background:var(--card);border-radius:10px;padding:14px 16px;box-shadow:0 1px 6px var(--shadow);">
+        <div style="font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:4px;">✦ You're off-track when you feel</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--text-dim);">Frustration</div>
+        <div style="font-size:0.72rem;color:var(--text-light);margin-top:4px;line-height:1.6;">The Generator's signal to slow down, stop initiating, and return to waiting for the right response.</div>
+      </div>
+    </div>
+
+    <!-- INCARNATION CROSS -->
+    <div style="background:var(--purple-bg);border-radius:12px;padding:18px 20px;margin-bottom:22px;border-left:3px solid var(--purple-light);">
+      <div style="font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;">Incarnation Cross · Life Purpose</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--text);margin-bottom:6px;">RAX of the Quantum Pulse (Consciousness)</div>
+      <div style="font-size:0.65rem;color:var(--text-light);margin-bottom:10px;letter-spacing:0.04em;">Gates 63/64 · 5/35</div>
+      <div style="font-size:0.8rem;color:var(--text-dim);line-height:1.8;">Your life purpose moves through the cycle of doubt and certainty — questioning and testing reality (63/64: Logic and Confusion) and then living and accumulating real experience (5/35: Patterns and Change). You're not here to have all the answers. You're here to be the living demonstration that trusting the process leads to wisdom. The uncertainty IS the path. You're a walking proof-of-concept.</div>
+    </div>
+
+    <!-- YOUR 5 CHANNELS -->
+    <div style="font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;margin-top:4px;">Your 5 Defined Channels</div>
+
+    <div class="astro-card" onclick="toggleAstro(this)">
+      <div class="astro-card-header">
+        <span class="astro-card-glyph">63–4</span>
+        <span class="astro-card-title">Potentiality · Logic</span>
+        <span class="astro-card-arrow">▼ more</span>
+      </div>
+      <div class="astro-card-body">
+        <p><strong>Head → Ajna.</strong> The channel of logical, systematic thinking — the mind that tests ideas against reality before accepting them. Gate 63 is doubt and questioning; Gate 4 is the logical answer that emerges from holding the question.</p>
+        <p>This channel means your mind is naturally analytical and evidence-based. You don't accept things at face value — you test them. This is a gift, not skepticism. Your mind is a logic engine designed to find the patterns that actually work.</p>
+        <div class="astro-andie"><strong>✦ In practice:</strong> When your mind loops on a question, that's the 63-4 at work — it's not anxiety, it's the logic channel doing its job. Give it a problem worth solving. Your mental clarity is genuinely reliable once the Emotional Authority has had time to settle.</div>
+      </div>
+    </div>
+
+    <div class="astro-card" onclick="toggleAstro(this)">
+      <div class="astro-card-header">
+        <span class="astro-card-glyph">17–62</span>
+        <span class="astro-card-title">Formulation · Acceptance</span>
+        <span class="astro-card-arrow">▼ more</span>
+      </div>
+      <div class="astro-card-body">
+        <p><strong>Ajna → Throat.</strong> The channel that takes logical conclusions and articulates them clearly. Gate 17 is the opinion — the next logical step; Gate 62 is the precise, detailed expression of facts. Together: you think clearly AND you can speak it.</p>
+        <p>This channel connects your mental clarity (Ajna) directly to your voice (Throat). What you say has structure. People can follow your thinking. You communicate complex ideas in a way that lands — when you've had time to process.</p>
+        <div class="astro-andie"><strong>✦ In practice:</strong> This is why you can be a powerful teacher, explainer, or guide in healing work. Your voice carries logical authority. The key: only speak when asked or when responding — initiating speeches or unsolicited advice lands differently than responding to genuine questions.</div>
+      </div>
+    </div>
+
+    <div class="astro-card" onclick="toggleAstro(this)">
+      <div class="astro-card-header">
+        <span class="astro-card-glyph">3–60</span>
+        <span class="astro-card-title">Innovation · Mutation</span>
+        <span class="astro-card-arrow">▼ more</span>
+      </div>
+      <div class="astro-card-body">
+        <p><strong>Sacral → Root.</strong> The channel of mutation — of energy that wants to break existing patterns and introduce something new into the world. Gate 60 is the acceptance of limitation; Gate 3 is the ordering that comes out of chaos. Innovation lives here.</p>
+        <p>This channel means you carry energy that mutates. You don't just improve existing things — you introduce genuinely new patterns. This energy can feel chaotic from the inside (Gate 3: the difficulty in the new) but produces genuine breakthrough. The pressure of Gate 60 (Root) drives you; Gate 3 transforms that pressure into something new.</p>
+        <div class="astro-andie"><strong>✦ In practice:</strong> This is why you're drawn to unconventional healing (Shatabhisha Sun, 100 healers) — your energy literally introduces mutations in how things are done. Trust the chaos during creation. The order comes after.</div>
+      </div>
+    </div>
+
+    <div class="astro-card" onclick="toggleAstro(this)">
+      <div class="astro-card-header">
+        <span class="astro-card-glyph">19–49</span>
+        <span class="astro-card-title">Intimacy &amp; Connection · Love &amp; Marriage</span>
+        <span class="astro-card-arrow">▼ more</span>
+      </div>
+      <div class="astro-card-body">
+        <p><strong>Root → Solar Plexus.</strong> The channel of deep, emotionally significant bonding. Gate 19 is the need — a primal sensitivity to belonging and connection; Gate 49 is the principles around which revolution and intimacy are organized. Together: intimacy as a core structural need, not a nice-to-have.</p>
+        <p>This channel is why connection isn't optional for you — it's wired into your energy field. You are extremely sensitive to belonging, to being needed, and to the emotional principles that govern relationships. When this channel is honored (genuine, deep, committed connection), you thrive. When it's not (surface connection, emotional unavailability), you feel it in your body.</p>
+        <div class="astro-andie"><strong>✦ In practice:</strong> This pairs directly with Venus exalted in Revati 7th house — your design and your chart both say deep, spiritually resonant connection is not a want. It's a need. And you're built to attract exactly that when you're in your correct energy.</div>
+      </div>
+    </div>
+
+    <div class="astro-card" onclick="toggleAstro(this)">
+      <div class="astro-card-header">
+        <span class="astro-card-glyph">41–30</span>
+        <span class="astro-card-title">Intention · Fantasy &amp; Desire</span>
+        <span class="astro-card-arrow">▼ more</span>
+      </div>
+      <div class="astro-card-body">
+        <p><strong>Root → Solar Plexus.</strong> The channel of experiential hunger — of desire as the fuel for living fully. Gate 41 is the imagination of future experience; Gate 30 is the emotional fire of wanting to feel something real. Together: you are built to be drawn toward life by desire and emotion.</p>
+        <p>This channel means you're powered by wanting — by the feeling of something calling you forward. This is not restlessness or dissatisfaction. This is your design's engine. The key: the desire needs to be met with the correct Sacral response AND emotional clarity, not impulsive action. Dreams and fantasies that feel emotionally alive are data — they show you where your life force wants to go.</p>
+        <div class="astro-andie"><strong>✦ In practice:</strong> Notice what you daydream about consistently. What experiences keep calling you even when they seem impractical? That's Gate 41 pointing toward Gate 30's emotional fulfillment. The fantasies that won't leave you alone are often the ones you're designed to live.</div>
+      </div>
+    </div>
+
+    <!-- SPLIT DEFINITION EXPLAINER -->
+    <div style="background:var(--card);border-radius:12px;padding:18px 20px;margin-top:20px;margin-bottom:22px;box-shadow:0 1px 8px var(--shadow);border-top:2px solid var(--crimson);">
+      <div style="font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">Understanding Your Split Definition</div>
+      <p style="font-size:0.82rem;color:var(--text-dim);line-height:1.85;margin-bottom:10px;">You have two separate circuitry groups that are NOT internally connected: <strong style="color:var(--text)">Group 1 — Head + Ajna + Throat</strong> (mental clarity and articulation) and <strong style="color:var(--text)">Group 2 — Sacral + Root + Solar Plexus</strong> (life force, pressure, and emotional depth). The centers in between — G/Self Center, Heart/Will, and Spleen — are open.</p>
+      <p style="font-size:0.82rem;color:var(--text-dim);line-height:1.85;margin-bottom:10px;">This means: your mental clarity and your gut/emotional energy don't automatically speak to each other internally. The bridge comes from <strong style="color:var(--text)">outside</strong> — from the right person, environment, or experience that completes your circuitry in the moment.</p>
+      <div class="jc-highlight">The right people don't distract you from yourself — they help you find yourself. Your Split Definition means you're literally designed to be bridged by meaningful connection. This is not a flaw. It is your design.</div>
+      <p style="font-size:0.82rem;color:var(--text-dim);line-height:1.85;margin-top:10px;">Practically: you may notice that in the right company, things click — ideas flow, your body knows what to do, emotional clarity arrives faster. In the wrong company or alone for too long, the two circuits feel disconnected. Notice who bridges you. Those people are significant.</p>
+    </div>
+
+    <!-- OPEN CENTERS -->
+    <div style="font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;">Your Open Centers — Where You're Flexible &amp; Wise</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:24px;">
+      <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);">
+        <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">G / Self Center</div>
+        <div style="font-size:0.75rem;color:var(--text-dim);line-height:1.7;">No fixed identity or direction. You discover who you are through environment and others — this is a gift of deep adaptability, not a lack of self.</div>
+      </div>
+      <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);">
+        <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">Heart / Will Center</div>
+        <div style="font-size:0.75rem;color:var(--text-dim);line-height:1.7;">Not designed to prove worth through willpower. Rest is not laziness — it's correct. You don't need to push to be valued.</div>
+      </div>
+      <div style="background:var(--card);border-radius:10px;padding:13px 14px;box-shadow:0 1px 6px var(--shadow);">
+        <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">Spleen Center</div>
+        <div style="font-size:0.75rem;color:var(--text-dim);line-height:1.7;">No consistent intuitive hits — your body's intelligence comes through the Sacral and Emotional waves instead. Trust those over momentary fear signals.</div>
+      </div>
+    </div>
+
+    <!-- HD + VEDIC INTEGRATION -->
+    <div style="background:var(--purple-bg);border-radius:14px;padding:20px 22px;margin-bottom:6px;border-left:3px solid var(--purple-light);">
+      <div style="font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:14px;">Where Human Design + Vedic Astrology Say the Same Thing</div>
+
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">1/4 Profile + Rahu in Cancer 11th House</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">Line 4 (Stabilizer) means your network is the vehicle — your life impact moves through who you know and who trusts you. Rahu in the 11th says community IS your soul's evolution. Both systems: who you build with matters more than almost anything else.</div>
+      </div>
+
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">Open G Center + Virgo Rising + Pisces 7th House Stellium</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">Open G = no fixed self or direction — you find identity through environment and connection. Virgo Rising chart ruler in Pisces 7th = your whole life navigates through spiritual partnership. The "I don't know who I am without context" feeling is not a flaw. It's your design.</div>
+      </div>
+
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">Emotional Authority + Moon in Leo 12th House</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">Emotional Authority says: your emotional wave takes time and your clarity is interior, private, not for public display. Leo Moon in the 12th says exactly the same thing — your richest emotional world is your most private one. Both: don't decide from the peak or trough. Wait.</div>
+      </div>
+
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">Channel 19–49 (Intimacy) + Venus Exalted in Revati 7th</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">You have Intimacy & Connection as a defined channel — it's literally wired into your energy field as a core structural need. AND Venus is exalted in Pisces in your 7th house (the house of partnership). Deep, spiritually resonant connection is not optional for you. It's how you're built to thrive.</div>
+      </div>
+
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">Defined Sacral (Generator) + Sun in Aquarius 6th (Shatabhisha)</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">You have sustainable, renewable life force (Sacral defined = Generator). Your soul's deepest expression comes through healing, health, and body practice (6th house Sun, Shatabhisha = 100 healers). When your Sacral says yes to healing work, that's not just strategy — it's your soul responding.</div>
+      </div>
+
+      <div>
+        <div style="font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:4px;">Split Definition + Pisces 7th House Stellium</div>
+        <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.75;">Your split needs to be bridged from outside — the right person completes your circuitry. Your Pisces 7th stellium says the right partner brings grace, wisdom, and spiritual completion. These aren't coincidences. Both systems are pointing at the same truth: the right people don't complete you in a codependent way — they activate what's already there.</div>
+      </div>
+    </div>
+
+  </div>
+
 </main>
 </div>
 
@@ -1421,11 +1659,13 @@ function buildNav(){
   MONTHS.forEach(([y,m,label])=>t+='<button onclick="goMonth('+y+','+m+')">'+label+'</button>');
   t+='<button onclick="goIndex()">✦ Chart Story</button>';
   t+='<button onclick="goAstroIndex()">✺ Astrology Index</button>';
+  t+='<button onclick="goHdIndex()">◈ Human Design</button>';
   document.getElementById('topMonthNav').innerHTML=t;
 }
 function goMonth(y,m){document.getElementById('month-'+y+'-'+m)?.scrollIntoView({behavior:'smooth',block:'start'});}
 function goIndex(){document.getElementById('month-index')?.scrollIntoView({behavior:'smooth',block:'start'});}
 function goAstroIndex(){document.getElementById('astro-index')?.scrollIntoView({behavior:'smooth',block:'start'});}
+function goHdIndex(){document.getElementById('hd-index')?.scrollIntoView({behavior:'smooth',block:'start'});}
 function goToday(){
   const ds=getTodayStr();const[y,m]=ds.split('-');
   const el=document.getElementById('month-'+y+'-'+parseInt(m));
