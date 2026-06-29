@@ -38,11 +38,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .main{flex:1;padding:28px 28px 60px;max-width:920px;}
 .mobile-chart-btn{display:none;width:100%;padding:9px 14px;margin-bottom:16px;background:var(--green-mid);border:1px solid var(--border-gold);border-radius:8px;color:var(--gold);font-size:0.75rem;letter-spacing:0.06em;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;}
 .mobile-chart-btn:hover{background:rgba(61,106,133,0.1);}
-.mobile-close-sidebar{display:none;width:100%;padding:11px;background:var(--crimson);color:#fff;border:none;border-radius:8px;font-size:0.8rem;font-weight:500;cursor:pointer;margin-bottom:18px;font-family:'Inter',sans-serif;letter-spacing:0.04em;}
+.mobile-close-sidebar{display:none;position:absolute;top:12px;right:14px;background:none;border:none;color:var(--text-light);font-size:1.2rem;cursor:pointer;line-height:1;padding:4px 6px;z-index:10;}
 @media(max-width:760px){
   .outer{flex-direction:column;}
   .sidebar{display:none;position:fixed;top:89px;left:0;right:0;bottom:0;width:100%;height:calc(100vh - 89px);z-index:250;overflow-y:auto;border-right:none;border-bottom:none;}
-  .sidebar.mobile-open{display:block;}
+  .sidebar.mobile-open{display:block;position:fixed;}
   .main{padding:20px 16px 60px;}
   .mobile-chart-btn{display:block;}
   .mobile-close-sidebar{display:block;}
@@ -257,8 +257,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 <div class="month-nav-bar" id="topMonthNav"></div>
 <div class="outer">
 <aside class="sidebar">
-  <button class="mobile-close-sidebar" onclick="toggleMobileInfo()">✕ Close Chart</button>
-  <div class="sb-brand">✦ EAUCO</div>
+  <button class="mobile-close-sidebar" onclick="toggleMobileInfo()">✕</button>
+  <div class="sb-brand" style="opacity:0.28;font-size:0.7rem;">✦ EAUCO</div>
   <div class="sb-name">Devin<br>Fena</div>
   <div class="sb-tagline">Life Navigation Planner · 2026–2027</div>
   <div class="sb-section">
