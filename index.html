@@ -7,28 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:          #f5f6f8;
+  --bg:          #faf8f4;
   --card:        #ffffff;
-  --card2:       #eef1f4;
-  --crimson:     #3d6a85;
-  --crimson-mid: #5585a0;
-  --crimson-light:#7aafc5;
-  --gold:        #7a6535;
-  --gold-light:  #9a8045;
-  --gold-bg:     rgba(122,101,53,0.06);
-  --green-dark:  #e8eef2;
-  --green-mid:   #d5e0e8;
-  --text:        #1a2632;
-  --text-dim:    #3a5060;
-  --text-light:  #7a90a0;
-  --border:      rgba(0,0,0,0.08);
-  --border-gold: rgba(122,101,53,0.22);
-  --moonlit:     #3d6a85;
-  --purple:      #7b5ea7;
-  --purple-light:#a085cc;
-  --purple-mid:  #9270bb;
-  --purple-bg:   rgba(123,94,167,0.07);
-  --shadow:      rgba(0,0,0,0.06);
+  --card2:       #f0ebe2;
+  --crimson:     #4a9e96;
+  --crimson-mid: #5bb5ad;
+  --crimson-light:#82ccc6;
+  --gold:        #b07d2a;
+  --gold-light:  #c99040;
+  --gold-bg:     rgba(176,125,42,0.08);
+  --green-dark:  #eaf4f2;
+  --green-mid:   #d2ece8;
+  --text:        #1e2420;
+  --text-dim:    #3d4a42;
+  --text-light:  #7a8a80;
+  --border:      rgba(0,0,0,0.07);
+  --border-gold: rgba(176,125,42,0.22);
+  --moonlit:     #4a9e96;
+  --purple:      #8b68c0;
+  --purple-light:#b095d5;
+  --purple-mid:  #9e7acc;
+  --purple-bg:   rgba(139,104,192,0.09);
+  --shadow:      rgba(0,0,0,0.05);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -99,7 +99,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .top-header-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;color:var(--gold);letter-spacing:0.02em;}
 .top-header-name em{font-style:italic;color:var(--moonlit);}
 .top-header-sub{font-size:0.6rem;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;}
-.top-today-btn{background:var(--crimson);color:var(--text);border:none;border-radius:20px;padding:7px 16px;font-family:'Inter',sans-serif;font-size:0.72rem;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s;white-space:nowrap;}
+.top-today-btn{background:var(--crimson);color:#fff;border:none;border-radius:20px;padding:7px 16px;font-family:'Inter',sans-serif;font-size:0.72rem;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s;white-space:nowrap;}
 .top-today-btn:hover{background:var(--crimson-mid);}
 /* ── MONTH NAV BAR ── */
 .month-nav-bar{position:sticky;top:49px;z-index:199;background:var(--green-dark);border-bottom:1px solid var(--border);overflow-x:auto;white-space:nowrap;padding:0 14px;scrollbar-width:none;}
@@ -108,7 +108,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .month-nav-bar button:hover{color:var(--gold);}
 .month-nav-bar button.active{color:var(--gold);border-bottom-color:var(--gold);font-weight:500;}
 /* keep sidebar today-btn smaller for mobile */
-.today-btn{display:block;width:100%;background:var(--crimson);color:var(--text);border:none;border-radius:8px;padding:9px 12px;font-family:'Inter',sans-serif;font-size:0.73rem;font-weight:500;cursor:pointer;margin-top:14px;letter-spacing:0.04em;transition:background 0.2s;}
+.today-btn{display:block;width:100%;background:var(--crimson);color:#fff;border:none;border-radius:8px;padding:9px 12px;font-family:'Inter',sans-serif;font-size:0.73rem;font-weight:500;cursor:pointer;margin-top:14px;letter-spacing:0.04em;transition:background 0.2s;}
 .today-btn:hover{background:var(--crimson-mid);}
 .month-nav{margin-top:12px;}
 .month-nav-btn{display:block;width:100%;text-align:left;background:none;border:none;color:var(--text-dim);font-family:'Inter',sans-serif;font-size:0.7rem;padding:4px 8px;cursor:pointer;border-radius:5px;transition:all 0.15s;}
@@ -1436,7 +1436,7 @@ function toggleChapter(el){el.classList.toggle('open');}
 function toggleAstro(el){el.classList.toggle('open');}
 
 function fireworks(){
-  const colors=['#3d6a85','#7aafc5','#9a8045','#7a6535','#5585a0','#eef1f4','#3d6a85'];
+  const colors=['#4a9e96','#82ccc6','#b07d2a','#8b68c0','#b095d5','#c99040','#5bb5ad'];
   for(let i=0;i<65;i++){
     const el=document.createElement('div');el.className='confetti-piece';
     el.style.cssText='left:'+Math.random()*100+'%;top:-10px;background:'+colors[Math.floor(Math.random()*colors.length)]+';animation-duration:'+(1.5+Math.random()*2)+'s;animation-delay:'+Math.random()*0.6+'s;';
